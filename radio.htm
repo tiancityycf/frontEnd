@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+
+        <style type=text/css>
+            .sex_div {
+                position: relative;
+                float:left;
+                line-height: 30px;
+                color: #999;
+            }    
+            input[type="radio"] {
+                width: 80px;
+                height: 20px;
+                opacity: 0;
+            }
+
+            label {
+                position: absolute;
+                left: 5px;
+                top: 3px;
+                width: 80px;
+                height: 20px;
+
+            }
+
+            /*设置选中的input的样式*/
+            /* + 是兄弟选择器,获取选中后的label元素*/
+            input:checked+label { 
+                color:#7ed321;
+            }
+            input:checked+label::after {
+                position: absolute;
+                content: "";
+                width: 12px;
+                height: 12px;
+                top: 10px;
+                left: 0px;
+                background-color:#7ED321;
+                border-radius: 50%;
+            }
+            .radio_border{
+                position:absolute;
+                border:1px solid #999;
+                border-radius:50%;
+                width:16px;
+                height:16px;
+                top:7px;
+                left:-3px;
+                /*background-color: #e7e7e7;*/
+            }
+
+        </style>
+        <title>css自定义radio样式</title>
+    </head>
+    <body>
+        <div class="sex_div">
+            <input id="item1" type="radio" name="item" value="0" checked>
+            <label for="item1"><div class="radio_border"></div><span style="margin-left:20px;">男孩</span></label> 
+        </div>
+        <div class="sex_div">
+            <input id="item2" type="radio" name="item"  style="margin-left:20px;" value="1">
+            <label for="item2"><div class="radio_border"></div><span style="margin-left:20px;">女孩</span></label>
+        </div>
+    </body>
+</html>
