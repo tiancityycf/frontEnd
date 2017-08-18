@@ -16,8 +16,8 @@
                 color: #999;
             }    
             input[type="radio"] {
-                width: 80px;
-                height: 20px;
+                width: 60px;
+                height:32px;
                 opacity: 0;
             }
 
@@ -25,9 +25,8 @@
                 position: absolute;
                 left: 5px;
                 top: 3px;
-                width: 80px;
-                height: 20px;
-
+                width: 100%;
+                line-height:32px;
             }
 
             /*设置选中的input的样式*/
@@ -61,12 +60,12 @@
     </head>
     <body>
         <div class="sex_div">
-            <input id="item1" type="radio" name="item" value="0" checked>
-            <label for="item1"><div class="radio_border"></div><span style="margin-left:20px;">男孩</span></label> 
+            <input id="sex1" type="radio" name="sex" value="0" checked>
+            <label for="sex1"><div class="radio_border"></div><span style="margin-left:20px;">男孩</span></label> 
         </div>
         <div class="sex_div">
-            <input id="item2" type="radio" name="item"  style="margin-left:20px;" value="1">
-            <label for="item2"><div class="radio_border"></div><span style="margin-left:20px;">女孩</span></label>
+            <input id="sex2" type="radio" name="sex"  style="margin-left:20px;" value="1">
+            <label for="sex2"><div class="radio_border"></div><span style="margin-left:20px;">女孩</span></label>
         </div>
     </body>
 </html>
