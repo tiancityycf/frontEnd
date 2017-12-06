@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="chief">
+    <meta name="description" content="kkcoin exchange">
+    <meta name="keywords" content="kkcoin exchange btc eth">
+    <title>dom垂直居中演示</title>
+</head>
+
+<style>
+
+.div1 {
+    width:500px;
+    height:600px;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    background-color: #00a0a1;
+}
+.img1 {
+    vertical-align:middle;
+    width: 100px;
+}
+
+.parentElement1 {
+    width:500px;
+    height:600px;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    background-color: #00a0a1;
+}
+.childElement1 {
+    vertical-align:middle;
+    width: 100px;
+}
+
+
+.parentElement2{
+    width:500px;
+    height:600px;
+    text-align:center;
+    background-color: #00a0a1;
+}
+.childElement2{
+    position: relative;
+    width: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.parentElement3{
+    position:relative;
+    width:500px;
+    height:600px;
+    background-color: #00a0a1;
+}
+.childElement3{
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.parentElement4{
+    display:flex;/*Flex布局*/
+    display: -webkit-flex; /* Safari */
+    align-items:center;/*指定垂直居中*/
+    vertical-align:middle;
+    width:500px;
+    height:600px;
+    background-color: #00a0a1;
+}
+.childElement4{
+    width: 100px;
+}
+</style>
+<div>方法一(最佳方案):
+这种方式兼容 safari,firefox,chrome等
+要注意的是，如果div浮动了，垂直居中的效果就失效了。
+自己的解决办法是在div内再套一层，让外层div浮动，里层div如上的样式即可
+    </div>
+<div class="parentElement1">
+    <img class="childElement1" src="http://s1.dwstatic.com/group1/M00/3B/43/0ae2df932a8c0ffcc9d6f8672efa0587.jpg" />
+    xxx
+    <a href=""  >这是个连接</a>
+</div>
+
+
+<div>方法二:
+这种方式不兼容 safari
+    若父容器下只有一个元素，且父元素设置了高度，则只需要使用相对定位即可
+</div>
+      <div class="parentElement2">
+<img class="childElement2" src="http://s1.dwstatic.com/group1/M00/3B/43/0ae2df932a8c0ffcc9d6f8672efa0587.jpg" />
+</div>
+
+<div>方法三:
+    这种方式不兼容 safari
+    不知道自己高度和父容器高度的情况下, 利用绝对定位只需要以下三行：
+</div>
+<div class="parentElement3">
+    <img class="childElement3" src="http://s1.dwstatic.com/group1/M00/3B/43/0ae2df932a8c0ffcc9d6f8672efa0587.jpg" />
+</div>
+
+<div>方法四:
+    这种方式不兼容 safari
+    Flex 布局：
+    不考虑兼容老式浏览器的话，用Flex布局简单直观一劳永逸
+</div>
+<div class="parentElement3">
+    <img class="childElement3" src="http://s1.dwstatic.com/group1/M00/3B/43/0ae2df932a8c0ffcc9d6f8672efa0587.jpg" />
+</div>
+</html>
